@@ -1,0 +1,6 @@
+{
+  "name": "IK.KO Energy Ltd",
+  "description": "Official corporate website and online gas delivery portal for IK.KO Energy Ltd in Owerri, Nigeria.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
