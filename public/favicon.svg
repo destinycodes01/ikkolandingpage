@@ -1,41 +1,73 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
   <defs>
-    <!-- Top Green Flame Gradient -->
-    <linearGradient id="gFlame" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00D059" />
-      <stop offset="50%" stop-color="#00A843" />
-      <stop offset="100%" stop-color="#007A2F" />
+    <!-- Vibrant Green Flame Gradients with 3D Highlight & Depth -->
+    <linearGradient id="greenBaseGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#00E65B" />
+      <stop offset="45%" stop-color="#00AA44" />
+      <stop offset="100%" stop-color="#006C2B" />
     </linearGradient>
 
-    <!-- Bottom Red Flame Gradient -->
-    <linearGradient id="rFlame" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF2E2E" />
-      <stop offset="50%" stop-color="#E51212" />
-      <stop offset="100%" stop-color="#9E0000" />
+    <linearGradient id="greenHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#73FF9D" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#00E65B" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#00AA44" stop-opacity="0" />
     </linearGradient>
+
+    <!-- Vibrant Red Flame Gradients with 3D Highlight & Depth -->
+    <linearGradient id="redBaseGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B3B" />
+      <stop offset="45%" stop-color="#E51010" />
+      <stop offset="100%" stop-color="#940000" />
+    </linearGradient>
+
+    <linearGradient id="redHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA8A8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#FF3B3B" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#E51010" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="softFavShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.1" />
+    </filter>
   </defs>
 
-  <!-- White background badge with rounded corners for dark & light browser tab contrast -->
-  <rect width="512" height="512" rx="96" fill="#FFFFFF" />
+  <!-- Crisp white rounded background container for maximum contrast in both light and dark browser tabs -->
+  <rect width="512" height="512" rx="100" fill="#FFFFFF" />
 
-  <!-- Enlarged and perfectly centered IK.KO flame mark -->
-  <g transform="translate(136, 10) scale(1.21)">
-    <!-- GREEN FLAME SWIRL -->
+  <g transform="translate(48, 16) scale(0.92)" filter="url(#softFavShadow)">
+    
+    <!-- GREEN FLAME SWIRL (Upper Right) -->
+    <!-- Main Green Body -->
     <path
-      d="M 185,22 C 185,22 135,45 112,95 C 88,145 105,190 148,222 C 182,248 198,272 178,310 C 160,345 120,358 85,338 C 112,320 132,290 120,258 C 105,218 55,188 68,128 C 78,82 122,38 185,22 Z"
-      fill="url(#gFlame)"
+      d="M 270 5 C 270 5 220 35 190 90 C 148 168 185 240 245 292 C 302 342 332 380 305 440 C 278 498 212 518 158 488 C 205 460 238 412 220 360 C 196 295 110 246 130 150 C 146 76 215 28 270 5 Z"
+      fill="url(#greenBaseGrad)"
+    />
+    <!-- Green Flame Top Bevel / Ridge Highlight -->
+    <path
+      d="M 270 5 C 270 5 220 35 190 90 C 148 168 185 240 245 292 C 220 240 180 180 200 115 C 220 50 270 5 270 5 Z"
+      fill="url(#greenHighlight)"
     />
 
-    <!-- RED FLAME SWIRL -->
+    <!-- MAIN RED FLAME SWIRL (Middle Left) -->
+    <!-- Main Red Body -->
     <path
-      d="M 72,112 C 72,112 35,160 22,208 C 5,268 38,328 102,342 C 132,348 145,338 128,375 C 112,410 72,412 35,385 C 62,370 82,342 72,310 C 58,268 8,228 22,170 C 32,128 58,120 72,112 Z"
-      fill="url(#rFlame)"
+      d="M 125 142 C 125 142 62 218 42 295 C 15 398 68 498 172 520 C 222 530 242 512 215 570 C 188 625 125 628 65 582 C 108 558 140 512 125 460 C 102 392 20 328 42 232 C 58 165 102 152 125 142 Z"
+      transform="translate(-10, -42) scale(0.86)"
+      fill="url(#redBaseGrad)"
+    />
+    <!-- Red Flame Top Bevel Highlight -->
+    <path
+      d="M 125 142 C 125 142 62 218 42 295 C 15 398 68 498 172 520 C 125 460 80 380 98 290 C 112 210 125 142 125 142 Z"
+      transform="translate(-10, -42) scale(0.86)"
+      fill="url(#redHighlight)"
     />
 
-    <!-- LOWER RED FLAME ACCENT TIP -->
+    <!-- LOWER RED FLAME TAIL (Bottom Left) -->
     <path
-      d="M 52,268 C 38,300 48,335 75,355 C 60,345 52,328 58,305 C 62,288 78,275 52,268 Z"
-      fill="#C40D0D"
+      d="M 88 368 C 65 420 80 478 122 510 C 98 495 85 468 94 430 C 100 402 128 380 88 368 Z"
+      transform="translate(-5, -30) scale(0.92)"
+      fill="#E51010"
     />
+
   </g>
 </svg>
