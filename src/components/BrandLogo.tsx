@@ -87,7 +87,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
             <span style={{ color: greenColor, fontSize: size === 'sm' ? '1rem' : size === 'md' ? '1.35rem' : '1.75rem' }}>
               IK
             </span>
-            <span className="inline-block w-1.5 h-1.5 rounded-full mx-0.5" style={{ backgroundColor: redColor }} />
+            <span className="inline-block w-1.5 h-1.5 rounded-[1px] mx-0.5" style={{ backgroundColor: redColor }} />
             <span style={{ color: greenColor, fontSize: size === 'sm' ? '1rem' : size === 'md' ? '1.35rem' : '1.75rem' }}>
               KO
             </span>

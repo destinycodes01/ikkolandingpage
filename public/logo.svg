@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="100%" height="100%">
+  <defs>
+    <!-- Green Flame Gradient -->
+    <linearGradient id="logoGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E" />
+      <stop offset="50%" stop-color="#18A84E" />
+      <stop offset="100%" stop-color="#15803D" />
+    </linearGradient>
+
+    <!-- Red Flame Gradient -->
+    <linearGradient id="logoRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="50%" stop-color="#DD3F39" />
+      <stop offset="100%" stop-color="#B91C1C" />
+    </linearGradient>
+
+    <filter id="logoShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <g transform="translate(20, 10) scale(1.65)">
+    <!-- Outer Green Flame Swirl Ribbon -->
+    <path
+      d="M 65 8 C 65 8 50 23 45 40 C 40 56 48 70 60 76 C 68 80 72 78 68 86 C 64 94 50 100 38 96 C 28 93 24 80 28 70 C 32 60 42 50 42 36 C 42 20 28 13 28 13 C 28 13 20 26 20 43 C 20 66 32 86 52 96 C 72 106 92 93 90 70 C 88 50 75 30 65 8 Z"
+      fill="url(#logoGreenGrad)"
+      filter="url(#logoShadow)"
+    />
+
+    <!-- Inner Red Flame Swirl Ribbon -->
+    <path
+      d="M 28 33 C 28 33 15 48 12 66 C 9 83 20 100 38 106 C 48 110 55 108 50 114 C 44 120 28 120 18 112 C 8 104 2 88 8 73 C 14 58 28 46 28 33 Z"
+      fill="url(#logoRedGrad)"
+      filter="url(#logoShadow)"
+    />
+    
+    <!-- Lower Red Flame Accent Curve -->
+    <path
+      d="M 25 78 C 22 86 24 94 32 100 C 38 104 42 103 38 107 C 32 111 20 108 14 100 C 8 90 12 80 25 78 Z"
+      fill="#B91C1C"
+    />
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(200, 40)">
+    <!-- IK.KO text -->
+    <text x="0" y="70" font-family="'Poppins', 'Arial Black', sans-serif" font-weight="900" font-size="78" fill="#18A84E" letter-spacing="-1">IK</text>
+    <rect x="94" y="52" width="16" height="16" fill="#DD3F39" rx="2" />
+    <text x="120" y="70" font-family="'Poppins', 'Arial Black', sans-serif" font-weight="900" font-size="78" fill="#18A84E" letter-spacing="-1">KO</text>
+
+    <!-- ENERGY LTD text -->
+    <text x="0" y="130" font-family="'Poppins', 'Arial Black', sans-serif" font-weight="900" font-size="46" fill="#DD3F39" letter-spacing="3">ENERGY LTD</text>
+  </g>
+</svg>
