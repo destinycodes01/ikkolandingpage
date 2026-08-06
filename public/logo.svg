@@ -1,54 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 420" width="100%" height="100%">
   <defs>
     <!-- Green Flame Gradient -->
     <linearGradient id="logoGreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#22C55E" />
-      <stop offset="50%" stop-color="#18A84E" />
-      <stop offset="100%" stop-color="#15803D" />
+      <stop offset="0%" stop-color="#00D059" />
+      <stop offset="50%" stop-color="#00A843" />
+      <stop offset="100%" stop-color="#007A2F" />
     </linearGradient>
 
     <!-- Red Flame Gradient -->
     <linearGradient id="logoRedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#EF4444" />
-      <stop offset="50%" stop-color="#DD3F39" />
-      <stop offset="100%" stop-color="#B91C1C" />
+      <stop offset="0%" stop-color="#FF2E2E" />
+      <stop offset="50%" stop-color="#E51212" />
+      <stop offset="100%" stop-color="#9E0000" />
     </linearGradient>
-
-    <filter id="logoShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.12" />
-    </filter>
   </defs>
 
-  <g transform="translate(20, 10) scale(1.65)">
-    <!-- Outer Green Flame Swirl Ribbon -->
+  <!-- Left Dual Flame Icon -->
+  <g transform="translate(30, 20) scale(0.95)">
+    <!-- GREEN FLAME SWIRL -->
     <path
-      d="M 65 8 C 65 8 50 23 45 40 C 40 56 48 70 60 76 C 68 80 72 78 68 86 C 64 94 50 100 38 96 C 28 93 24 80 28 70 C 32 60 42 50 42 36 C 42 20 28 13 28 13 C 28 13 20 26 20 43 C 20 66 32 86 52 96 C 72 106 92 93 90 70 C 88 50 75 30 65 8 Z"
+      d="M 185,22 C 185,22 135,45 112,95 C 88,145 105,190 148,222 C 182,248 198,272 178,310 C 160,345 120,358 85,338 C 112,320 132,290 120,258 C 105,218 55,188 68,128 C 78,82 122,38 185,22 Z"
       fill="url(#logoGreenGrad)"
-      filter="url(#logoShadow)"
     />
 
-    <!-- Inner Red Flame Swirl Ribbon -->
+    <!-- RED FLAME SWIRL -->
     <path
-      d="M 28 33 C 28 33 15 48 12 66 C 9 83 20 100 38 106 C 48 110 55 108 50 114 C 44 120 28 120 18 112 C 8 104 2 88 8 73 C 14 58 28 46 28 33 Z"
+      d="M 72,112 C 72,112 35,160 22,208 C 5,268 38,328 102,342 C 132,348 145,338 128,375 C 112,410 72,412 35,385 C 62,370 82,342 72,310 C 58,268 8,228 22,170 C 32,128 58,120 72,112 Z"
       fill="url(#logoRedGrad)"
-      filter="url(#logoShadow)"
     />
-    
-    <!-- Lower Red Flame Accent Curve -->
+
+    <!-- LOWER RED FLAME ACCENT TIP -->
     <path
-      d="M 25 78 C 22 86 24 94 32 100 C 38 104 42 103 38 107 C 32 111 20 108 14 100 C 8 90 12 80 25 78 Z"
-      fill="#B91C1C"
+      d="M 52,268 C 38,300 48,335 75,355 C 60,345 52,328 58,305 C 62,288 78,275 52,268 Z"
+      fill="#C40D0D"
     />
   </g>
 
-  <!-- Brand Typography -->
-  <g transform="translate(200, 40)">
+  <!-- Right Typography: IK.KO ENERGY LTD -->
+  <g transform="translate(290, 80)">
     <!-- IK.KO text -->
-    <text x="0" y="70" font-family="'Poppins', 'Arial Black', sans-serif" font-weight="900" font-size="78" fill="#18A84E" letter-spacing="-1">IK</text>
-    <rect x="94" y="52" width="16" height="16" fill="#DD3F39" rx="2" />
-    <text x="120" y="70" font-family="'Poppins', 'Arial Black', sans-serif" font-weight="900" font-size="78" fill="#18A84E" letter-spacing="-1">KO</text>
+    <text x="0" y="110" font-family="'Poppins', 'Arial Black', sans-serif" font-weight="900" font-size="125" fill="#00A843" letter-spacing="-2">IK</text>
+    <rect x="150" y="85" width="22" height="22" fill="#E51212" rx="2" />
+    <text x="188" y="110" font-family="'Poppins', 'Arial Black', sans-serif" font-weight="900" font-size="125" fill="#00A843" letter-spacing="-2">KO</text>
 
     <!-- ENERGY LTD text -->
-    <text x="0" y="130" font-family="'Poppins', 'Arial Black', sans-serif" font-weight="900" font-size="46" fill="#DD3F39" letter-spacing="3">ENERGY LTD</text>
+    <text x="0" y="200" font-family="'Poppins', 'Arial Black', sans-serif" font-weight="900" font-size="70" fill="#E51212" letter-spacing="4">ENERGY LTD</text>
   </g>
 </svg>
