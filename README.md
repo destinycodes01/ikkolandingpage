@@ -67,6 +67,36 @@ Official web application for **IK.KO Energy Ltd**, Owerri's premier Liquefied Pe
 
 ---
 
+## 🌐 Deploying to Vercel
+
+1. **Push your code to GitHub / GitLab / Bitbucket**:
+   ```bash
+   git add .
+   git commit -m "Initial commit for IK.KO Energy website"
+   git push origin main
+   ```
+
+2. **Import Project into Vercel**:
+   - Go to [vercel.com](https://vercel.com) and log in.
+   - Click **Add New** > **Project**.
+   - Select your GitHub repository.
+
+3. **Configure Project Settings**:
+   - **Framework Preset**: Vite (automatically detected)
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+
+4. **Add Environment Variables**:
+   Under **Environment Variables**, add:
+   - `VITE_EMAILJS_SERVICE_ID`
+   - `VITE_EMAILJS_TEMPLATE_ID`
+   - `VITE_EMAILJS_PUBLIC_KEY`
+
+5. **Deploy**:
+   - Click **Deploy**. Vercel will build and assign a production HTTPS domain to your app.
+
+---
+
 ## 📍 Company Contact & Location
 
 - **Company Name**: IK.KO Energy Ltd
