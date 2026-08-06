@@ -15,19 +15,18 @@
     </linearGradient>
   </defs>
 
-  <!-- Clean canvas background for maximum tab contrast -->
-  <rect width="512" height="512" rx="110" fill="#FFFFFF" />
+  <!-- White background badge with rounded corners for dark & light browser tab contrast -->
+  <rect width="512" height="512" rx="96" fill="#FFFFFF" />
 
-  <g transform="translate(68, 36) scale(1.15)">
+  <!-- Enlarged and perfectly centered IK.KO flame mark -->
+  <g transform="translate(136, 10) scale(1.21)">
     <!-- GREEN FLAME SWIRL -->
-    <!-- Outer green top tip & ribbon curve -->
     <path
       d="M 185,22 C 185,22 135,45 112,95 C 88,145 105,190 148,222 C 182,248 198,272 178,310 C 160,345 120,358 85,338 C 112,320 132,290 120,258 C 105,218 55,188 68,128 C 78,82 122,38 185,22 Z"
       fill="url(#gFlame)"
     />
 
     <!-- RED FLAME SWIRL -->
-    <!-- Red lower ribbon curve -->
     <path
       d="M 72,112 C 72,112 35,160 22,208 C 5,268 38,328 102,342 C 132,348 145,338 128,375 C 112,410 72,412 35,385 C 62,370 82,342 72,310 C 58,268 8,228 22,170 C 32,128 58,120 72,112 Z"
       fill="url(#rFlame)"
