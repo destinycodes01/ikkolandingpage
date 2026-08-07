@@ -23,7 +23,7 @@ export const About: React.FC<AboutProps> = ({ onOpenOrderModal }) => {
   };
 
   return (
-    <section id="about" className="py-20 bg-white relative overflow-hidden">
+    <section id="about" className="py-20 bg-white relative overflow-hidden scroll-mt-20">
       {/* Decorative subtle background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px] opacity-40 pointer-events-none" />
 

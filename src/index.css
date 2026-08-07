@@ -13,6 +13,11 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
   body {
     font-family: 'Inter', sans-serif;
     color: #333333;

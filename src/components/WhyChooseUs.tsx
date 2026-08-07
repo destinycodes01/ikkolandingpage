@@ -20,7 +20,7 @@ export const WhyChooseUs: React.FC = () => {
   };
 
   return (
-    <section id="why-us" className="py-20 bg-[#F8FAFC] relative overflow-hidden">
+    <section id="why-us" className="py-20 bg-[#F8FAFC] relative overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}

@@ -9,7 +9,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal }) => {
   return (
-    <section id="home" className="relative min-h-[calc(100vh-80px)] flex items-center pt-6 pb-12 lg:py-16 overflow-hidden bg-gradient-to-b from-white via-[#F8FAFC] to-slate-100">
+    <section id="home" className="relative min-h-[calc(100vh-80px)] flex items-center pt-6 pb-12 lg:py-16 overflow-hidden bg-gradient-to-b from-white via-[#F8FAFC] to-slate-100 scroll-mt-20">
       {/* Background Animated Abstract Brand Color Shapes */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Blue Orb */}

@@ -36,10 +36,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+
+    const scrollToTarget = () => {
+      const element = document.querySelector(href);
+      if (element) {
+        const header = document.querySelector('header');
+        const headerOffset = header ? header.getBoundingClientRect().height : 70;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: Math.max(0, offsetPosition),
+          behavior: 'smooth',
+        });
+      }
+    };
+
+    // Execute scroll after small delay so drawer state change doesn't interrupt touch/scroll
+    setTimeout(scrollToTarget, 60);
   };
 
   return (

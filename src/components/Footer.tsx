@@ -12,6 +12,22 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      const header = document.querySelector('header');
+      const headerOffset = header ? header.getBoundingClientRect().height : 70;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <footer className="bg-slate-900 text-white pt-16 pb-8 border-t border-slate-800 relative overflow-hidden">
       {/* Background Accent Gradients */}
@@ -52,22 +68,22 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
             </h4>
             <ul className="space-y-2 text-sm text-slate-400">
               <li>
-                <a href="#home" className="hover:text-[#1FA1EC] transition-colors">Home</a>
+                <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="hover:text-[#1FA1EC] transition-colors">Home</a>
               </li>
               <li>
-                <a href="#about" className="hover:text-[#1FA1EC] transition-colors">About Us</a>
+                <a href="#about" onClick={(e) => handleNavClick(e, '#about')} className="hover:text-[#1FA1EC] transition-colors">About Us</a>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#1FA1EC] transition-colors">Services</a>
+                <a href="#services" onClick={(e) => handleNavClick(e, '#services')} className="hover:text-[#1FA1EC] transition-colors">Services</a>
               </li>
               <li>
-                <a href="#products" className="hover:text-[#1FA1EC] transition-colors">Gas Products</a>
+                <a href="#products" onClick={(e) => handleNavClick(e, '#products')} className="hover:text-[#1FA1EC] transition-colors">Gas Products</a>
               </li>
               <li>
-                <a href="#why-us" className="hover:text-[#1FA1EC] transition-colors">Why Choose Us</a>
+                <a href="#why-us" onClick={(e) => handleNavClick(e, '#why-us')} className="hover:text-[#1FA1EC] transition-colors">Why Choose Us</a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#1FA1EC] transition-colors">Contact Us</a>
+                <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')} className="hover:text-[#1FA1EC] transition-colors">Contact Us</a>
               </li>
             </ul>
           </div>
