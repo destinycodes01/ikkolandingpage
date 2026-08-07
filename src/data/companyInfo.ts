@@ -1,7 +1,7 @@
 import { Product, Service, StatItem } from '../types';
 
 // Import photorealistic generated marketing images
-import heroLpgStationImg from '../assets/images/hero_lpg_station_1786028438965.jpg';
+import heroLpgStationImg from '../assets/images/hero_ikko_station_1786097251103.jpg';
 import lpgDeliveryTruckImg from '../assets/images/lpg_delivery_truck_1786028452127.jpg';
 import lpgCylindersSetImg from '../assets/images/lpg_cylinders_set_1786028465178.jpg';
 import gasAccessoriesImg from '../assets/images/gas_accessories_1786028479825.jpg';
