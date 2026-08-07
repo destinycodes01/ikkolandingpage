@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Phone, Flame, ShieldCheck, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyInfo';
-import { BrandLogo } from './BrandLogo';
 
 interface HeroProps {
   onOpenOrderModal: (item?: string) => void;
@@ -169,11 +168,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal }) => {
                   <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Plant Location</p>
                   <p className="text-xs font-bold text-slate-900">Golden Gate, MCC Rd, Owerri</p>
                 </div>
-              </div>
-
-              {/* Floating Badge 2: Official Brand Logo Badge */}
-              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-lg border border-white/60 flex items-center z-10">
-                <BrandLogo size="sm" showText={true} />
               </div>
 
               {/* Floating Badge 2: Delivery Speed */}
