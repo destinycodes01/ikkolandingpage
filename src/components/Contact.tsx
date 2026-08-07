@@ -109,107 +109,80 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Two-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           
-          {/* Left Column: Contact Details & Interactive Google Map */}
+          {/* Left Column: Contact Details */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-5 space-y-6"
+            className="lg:col-span-5 flex"
           >
-            <div className="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-lg space-y-6">
-              <h3 className="text-2xl font-bold text-slate-900 font-heading border-b border-slate-100 pb-4">
-                Head Office &amp; Plant Location
-              </h3>
+            <div className="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-lg space-y-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 font-heading border-b border-slate-100 pb-4 mb-6">
+                  Head Office &amp; Plant Location
+                </h3>
 
-              {/* Address */}
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-2xl bg-[#1FA1EC]/10 text-[#1FA1EC] flex-shrink-0 mt-1">
-                  <MapPin className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Address</h4>
-                  <p className="text-sm font-bold text-slate-900 mt-1">
-                    {COMPANY_INFO.location.address}
-                  </p>
-                </div>
-              </div>
+                <div className="space-y-6">
+                  {/* Address */}
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-2xl bg-[#1FA1EC]/10 text-[#1FA1EC] flex-shrink-0 mt-1">
+                      <MapPin className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Address</h4>
+                      <p className="text-sm font-bold text-slate-900 mt-1">
+                        {COMPANY_INFO.location.address}
+                      </p>
+                    </div>
+                  </div>
 
-              {/* Phone */}
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-2xl bg-[#DD3F39]/10 text-[#DD3F39] flex-shrink-0 mt-1">
-                  <Phone className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Phone Lines</h4>
-                  <a
-                    href={`tel:${COMPANY_INFO.phone}`}
-                    className="text-base font-extrabold text-[#DD3F39] hover:underline mt-1 block"
-                  >
-                    {COMPANY_INFO.phoneFormatted} (07073333969)
-                  </a>
-                  <p className="text-xs text-slate-500">Calls &amp; WhatsApp available 24/7 for emergency delivery</p>
-                </div>
-              </div>
+                  {/* Phone */}
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-2xl bg-[#DD3F39]/10 text-[#DD3F39] flex-shrink-0 mt-1">
+                      <Phone className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Phone Lines</h4>
+                      <a
+                        href={`tel:${COMPANY_INFO.phone}`}
+                        className="text-base font-extrabold text-[#DD3F39] hover:underline mt-1 block"
+                      >
+                        {COMPANY_INFO.phoneFormatted} (07073333969)
+                      </a>
+                      <p className="text-xs text-slate-500">Calls &amp; WhatsApp available 24/7 for emergency delivery</p>
+                    </div>
+                  </div>
 
-              {/* Email */}
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-2xl bg-[#18A84E]/10 text-[#18A84E] flex-shrink-0 mt-1">
-                  <Mail className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Email Address</h4>
-                  <a
-                    href={`mailto:${COMPANY_INFO.email}`}
-                    className="text-sm font-bold text-slate-900 hover:text-[#1FA1EC] mt-1 block"
-                  >
-                    {COMPANY_INFO.email}
-                  </a>
-                </div>
-              </div>
+                  {/* Email */}
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-2xl bg-[#18A84E]/10 text-[#18A84E] flex-shrink-0 mt-1">
+                      <Mail className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Email Address</h4>
+                      <a
+                        href={`mailto:${COMPANY_INFO.email}`}
+                        className="text-sm font-bold text-slate-900 hover:text-[#1FA1EC] mt-1 block"
+                      >
+                        {COMPANY_INFO.email}
+                      </a>
+                    </div>
+                  </div>
 
-              {/* Hours */}
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-2xl bg-[#18689B]/10 text-[#18689B] flex-shrink-0 mt-1">
-                  <Clock className="w-6 h-6" />
+                  {/* Hours */}
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-2xl bg-[#18689B]/10 text-[#18689B] flex-shrink-0 mt-1">
+                      <Clock className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Plant Operating Hours</h4>
+                      <p className="text-sm font-bold text-slate-900 mt-1">{COMPANY_INFO.businessHours}</p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Plant Operating Hours</h4>
-                  <p className="text-sm font-bold text-slate-900 mt-1">{COMPANY_INFO.businessHours}</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Google Map Card */}
-            <div className="bg-white rounded-3xl p-5 border border-slate-200 shadow-md overflow-hidden mt-6 lg:mt-8 lg:w-[1000px] lg:max-w-none">
-              <div className="flex items-center justify-between px-1 pb-3 pt-1 relative z-10 border-b border-slate-100 mb-3">
-                <span className="text-xs sm:text-sm font-bold text-slate-800 uppercase tracking-wider flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-[#18A84E]" /> Golden Gate, Owerri Plant Location
-                </span>
-                <a
-                  href="https://maps.google.com/?q=MCC+Road+Golden+Gate+Owerri+Imo+State"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs font-bold text-[#1FA1EC] bg-[#1FA1EC]/10 hover:bg-[#1FA1EC]/20 hover:text-[#18689B] px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer relative z-20 shadow-sm"
-                >
-                  <span>Open in Maps</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              </div>
-              <div className="h-64 sm:h-72 rounded-2xl overflow-hidden border border-slate-100 relative z-0">
-                <iframe
-                  title="IK.KO Energy Ltd Owerri Location"
-                  src={COMPANY_INFO.location.mapUrl}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={false}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full"
-                />
               </div>
             </div>
           </motion.div>
@@ -374,6 +347,45 @@ export const Contact: React.FC = () => {
           </motion.div>
 
         </div>
+
+        {/* Full Width Google Map Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-10 lg:mt-12"
+        >
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-xl overflow-hidden w-full">
+            <div className="flex flex-wrap items-center justify-between gap-3 px-1 pb-4 pt-1 border-b border-slate-100 mb-4">
+              <span className="text-xs sm:text-sm font-extrabold text-slate-800 uppercase tracking-wider flex items-center gap-2">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#18A84E] flex-shrink-0" /> Golden Gate, Owerri Plant Location
+              </span>
+              <a
+                href="https://maps.google.com/?q=MCC+Road+Golden+Gate+Owerri+Imo+State"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-bold text-[#1FA1EC] bg-[#1FA1EC]/10 hover:bg-[#1FA1EC]/20 hover:text-[#18689B] px-4 py-2 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer shadow-sm"
+              >
+                <span>Open in Maps</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+            <div className="h-72 sm:h-80 md:h-[400px] rounded-2xl overflow-hidden border border-slate-100 relative">
+              <iframe
+                title="IK.KO Energy Ltd Owerri Location"
+                src={COMPANY_INFO.location.mapUrl}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
