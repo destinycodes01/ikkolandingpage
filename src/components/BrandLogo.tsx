@@ -1,5 +1,5 @@
 import React from 'react';
-import flameIconImg from '../assets/flame-icon.png';
+import { FLAME_ICON_BASE64 } from '../assets/flameIcon';
 
 interface BrandLogoProps {
   className?: string;
@@ -33,7 +33,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     <div className={`inline-flex items-center gap-3 select-none ${className}`}>
       {/* PNG Dual Flame Icon */}
       <img
-        src={flameIconImg}
+        src={FLAME_ICON_BASE64}
         alt="IK.KO Energy Logo"
         style={{ height: `${height}px`, width: 'auto' }}
         className="flex-shrink-0 object-contain transition-transform duration-300 hover:scale-105"
