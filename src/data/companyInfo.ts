@@ -25,7 +25,7 @@ export const COMPANY_INFO = {
   phone: '07073333969',
   phoneFormatted: '+234 707 333 3969',
   email: 'ik.koenergyltd@gmail.com',
-  businessHours: 'Mon - Sat: 7:30 AM - 7:00 PM | Sun: 10:00 AM - 5:00 PM',
+  businessHours: '7:00 AM - 8:00 PM (Monday - Sunday)',
   images: {
     heroStation: heroLpgStationImg,
     deliveryTruck: lpgDeliveryTruckImg,
