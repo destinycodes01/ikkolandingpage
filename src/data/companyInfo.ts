@@ -175,16 +175,28 @@ export const SERVICES_DATA: Service[] = [
 
 export const PRODUCTS_DATA: Product[] = [
   {
-    id: 'large-lpg-cylinder',
-    name: 'Large LPG Cylinder (50kg)',
+    id: '3kg-lpg-cylinder',
+    name: '3kg LPG Cylinder',
     category: 'cylinders',
-    shortDescription: 'Industrial & heavy commercial grade 50kg steel gas cylinder designed for heavy cooking needs.',
+    shortDescription: 'Ultra-compact and portable 3kg cooking gas cylinder ideal for students, single individuals, and outdoor camping.',
     fullDescription:
-      'Heavy-duty 50kg cylinder engineered for restaurants, bakeries, hotels, and large commercial kitchens. Features reinforced steel casing, high-flow valve, and corrosion-resistant powder coating.',
+      'Lightweight 3kg cylinder crafted for portability and ease of handling. Perfect for single occupants, students, or emergency backup cooking with sturdy carry handles.',
     image: lpgCylindersSetImg,
-    badge: 'Commercial Grade',
-    sizesAvailable: ['50kg'],
-    specs: ['Explosion-proof steel', 'High-flow industrial valve', 'SON Safety Certified'],
+    badge: 'Compact & Portable',
+    sizesAvailable: ['3kg'],
+    specs: ['Ultra-portable design', 'Precision leak-proof valve', 'SON Safety Certified'],
+  },
+  {
+    id: '6kg-lpg-cylinder',
+    name: '6kg LPG Cylinder',
+    category: 'cylinders',
+    shortDescription: 'Convenient 6kg gas cylinder for small families, bachelors, and compact apartment kitchens.',
+    fullDescription:
+      'Handy 6kg cylinder offering an ideal balance of compact size and extended burn time. Fits conveniently under kitchen countertops.',
+    image: lpgCylindersSetImg,
+    badge: 'Small Family Choice',
+    sizesAvailable: ['6kg'],
+    specs: ['Space-saving footprint', 'Coated anti-rust steel', 'High-pressure safety valve'],
   },
   {
     id: '9kg-lpg-cylinder',
@@ -206,9 +218,33 @@ export const PRODUCTS_DATA: Product[] = [
     fullDescription:
       'Nigeria’s favorite household size. Premium 12.5kg cylinder coated in high-visibility protective enamel. Designed for smooth gas flow, high durability, and maximum safety.',
     image: lpgCylindersSetImg,
-    badge: 'Best Seller',
+    badge: 'Best Seller (#1 Household Size)',
     sizesAvailable: ['12.5kg'],
     specs: ['Standard 12.5kg size', 'High-heat resistant coating', 'Double safety valve seal'],
+  },
+  {
+    id: '25kg-lpg-cylinder',
+    name: '25kg LPG Cylinder',
+    category: 'cylinders',
+    shortDescription: 'High-capacity 25kg cylinder designed for large households, frequent caterers, and canteens.',
+    fullDescription:
+      'Heavy-duty 25kg cylinder built for large families, commercial catering, and fast-food outlets requiring extended refill intervals.',
+    image: lpgCylindersSetImg,
+    badge: 'Large Household & Catering',
+    sizesAvailable: ['25kg'],
+    specs: ['High capacity steel body', 'Heavy-duty valve assembly', 'SON Certified'],
+  },
+  {
+    id: 'large-lpg-cylinder',
+    name: 'Large LPG Cylinder (50kg)',
+    category: 'cylinders',
+    shortDescription: 'Industrial & heavy commercial grade 50kg steel gas cylinder designed for heavy cooking needs.',
+    fullDescription:
+      'Heavy-duty 50kg cylinder engineered for restaurants, bakeries, hotels, and large commercial kitchens. Features reinforced steel casing, high-flow valve, and corrosion-resistant powder coating.',
+    image: lpgCylindersSetImg,
+    badge: 'Commercial Grade',
+    sizesAvailable: ['50kg'],
+    specs: ['Explosion-proof steel', 'High-flow industrial valve', 'SON Safety Certified'],
   },
   {
     id: 'gas-burner',

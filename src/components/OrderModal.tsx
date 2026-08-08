@@ -264,11 +264,12 @@ export const OrderModal: React.FC<OrderModalProps> = ({
                       onChange={(e) => setGasSize(e.target.value)}
                       className="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-[#1FA1EC] focus:border-[#1FA1EC] text-slate-800 text-sm font-medium bg-slate-50 focus:bg-white transition-colors"
                     >
-                      <option value="12.5kg">12.5kg Cooking Gas Cylinder (Standard Household)</option>
+                      <option value="3kg">3kg Cooking Gas Cylinder (Compact / Personal)</option>
+                      <option value="6kg">6kg Cooking Gas Cylinder (Small Family)</option>
                       <option value="9kg">9kg Cooking Gas Cylinder (Medium Family)</option>
-                      <option value="50kg">50kg Industrial Gas Cylinder (Commercial/Restaurant)</option>
-                      <option value="6kg">6kg Cooking Gas Cylinder</option>
-                      <option value="3kg">3kg Cooking Gas Cylinder</option>
+                      <option value="12.5kg">12.5kg Cooking Gas Cylinder (Standard Household Best Seller)</option>
+                      <option value="25kg">25kg Cooking Gas Cylinder (Large Family / Catering)</option>
+                      <option value="50kg">50kg Industrial Gas Cylinder (Commercial / Restaurant)</option>
                       <option value="Stainless Double Burner">Stainless Double Burner Stove</option>
                       <option value="Automatic Safety Regulator">Automatic Safety Regulator with Gauge</option>
                       <option value="Reinforced Gas Hose (2m)">Reinforced High Pressure Gas Hose (2m)</option>
