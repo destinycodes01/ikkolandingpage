@@ -99,7 +99,7 @@ export const Contact: React.FC = () => {
               Get In Touch With Us
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-heading tracking-tight">
-              Contact IK.KO Energy Ltd
+              CONTACT
             </h2>
             <p className="text-slate-600 mt-3 text-base">
               Have questions, need gas delivery, or want to inquire about petrol-to-gas conversion? Contact our customer support team today.
