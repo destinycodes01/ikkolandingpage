@@ -30,6 +30,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
     { name: 'Services', href: '#services' },
     { name: 'Products', href: '#products' },
     { name: 'Why Us', href: '#why-us' },
+    { name: 'How It Works', href: '#how-it-works' },
     { name: 'Contact', href: '#contact' },
   ];
 

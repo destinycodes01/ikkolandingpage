@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { HowItWorks } from './components/HowItWorks';
 import { About } from './components/About';
 import { Services } from './components/Services';
 import { Products } from './components/Products';
@@ -58,6 +59,9 @@ export default function App() {
 
         {/* Frequently Asked Questions */}
         <Faq />
+
+        {/* How It Works Interactive Process */}
+        <HowItWorks onOpenOrderModal={handleOpenOrderModal} />
 
         {/* Two-Column Contact Section with EmailJS Form & Google Maps */}
         <Contact />
