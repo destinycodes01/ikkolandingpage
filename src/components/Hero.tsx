@@ -15,11 +15,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal }) => {
         <img
           src={COMPANY_INFO.images.heroBg}
           alt="IK.KO Energy LPG Facility Background"
-          className="w-full h-full object-cover object-center opacity-25 filter brightness-90 saturate-110"
+          className="w-full h-full object-cover object-center opacity-45 filter brightness-95 saturate-110"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/80 to-slate-950/70" />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-transparent to-slate-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/65 to-slate-950/45" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent to-slate-950/85" />
       </div>
 
       {/* Background Animated Abstract Brand Color Shapes */}
