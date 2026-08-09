@@ -2,6 +2,7 @@ import { Product, Service, StatItem } from '../types';
 
 // Import photorealistic generated marketing images
 import heroLpgStationImg from '../assets/images/hero_station_v2_1786097586806.jpg';
+import heroBgEnergyImg from '../assets/images/hero_bg_energy_1786237633045.jpg';
 import lpgDeliveryTruckImg from '../assets/images/about_ikko_truck_fleet_1786098167245.jpg';
 import lpgCylindersSetImg from '../assets/images/ikko_lpg_cylinders_brand_1786100322968.jpg';
 import gasAccessoriesImg from '../assets/images/gas_accessories_1786028479825.jpg';
@@ -28,6 +29,7 @@ export const COMPANY_INFO = {
   businessHours: '7:00 AM - 8:00 PM (Monday - Sunday)',
   images: {
     heroStation: heroLpgStationImg,
+    heroBg: heroBgEnergyImg,
     deliveryTruck: lpgDeliveryTruckImg,
     cylindersSet: lpgCylindersSetImg,
     accessories: gasAccessoriesImg,

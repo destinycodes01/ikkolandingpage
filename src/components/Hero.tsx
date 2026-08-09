@@ -9,9 +9,21 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal }) => {
   return (
-    <section id="home" className="relative min-h-[calc(100vh-80px)] flex items-center pt-6 pb-12 lg:py-16 overflow-hidden bg-gradient-to-b from-white via-[#F8FAFC] to-slate-100 scroll-mt-20">
+    <section id="home" className="relative min-h-[calc(100vh-80px)] flex items-center pt-6 pb-12 lg:py-16 overflow-hidden bg-slate-900 scroll-mt-20">
+      {/* Background Image Layer */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={COMPANY_INFO.images.heroBg}
+          alt="IK.KO Energy LPG Facility Background"
+          className="w-full h-full object-cover object-center opacity-25 filter brightness-90 saturate-110"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/80 to-slate-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-transparent to-slate-950/90" />
+      </div>
+
       {/* Background Animated Abstract Brand Color Shapes */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         {/* Blue Orb */}
         <motion.div
           animate={{
@@ -24,7 +36,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal }) => {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="absolute -top-24 -left-24 w-96 h-96 bg-[#1FA1EC]/15 rounded-full blur-3xl"
+          className="absolute -top-24 -left-24 w-96 h-96 bg-[#1FA1EC]/20 rounded-full blur-3xl"
         />
 
         {/* Green Orb */}
@@ -39,7 +51,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal }) => {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="absolute top-1/2 -right-24 w-[30rem] h-[30rem] bg-[#18A84E]/15 rounded-full blur-3xl"
+          className="absolute top-1/2 -right-24 w-[30rem] h-[30rem] bg-[#18A84E]/20 rounded-full blur-3xl"
         />
 
         {/* Red Accent Glow */}
@@ -53,7 +65,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal }) => {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-          className="absolute bottom-10 left-1/3 w-80 h-80 bg-[#DD3F39]/10 rounded-full blur-3xl"
+          className="absolute bottom-10 left-1/3 w-80 h-80 bg-[#DD3F39]/15 rounded-full blur-3xl"
         />
       </div>
 
@@ -68,37 +80,37 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal }) => {
             className="lg:col-span-7 space-y-6 text-left"
           >
             {/* Location Tag */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1FA1EC]/10 border border-[#1FA1EC]/20 text-[#18689B] text-xs font-bold uppercase tracking-wider">
-              <span className="w-2 h-2 rounded-full bg-[#18A84E] animate-ping" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1FA1EC]/20 border border-[#1FA1EC]/40 text-[#60A5FA] text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-ping" />
               <span>Owerri, Imo State • Premier Cooking Gas Supplier</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.15] font-heading tracking-tight">
-              Reliable <span className="text-[#18A84E] underline decoration-[#1FA1EC]/40 decoration-4">LPG Supply</span> &amp; Cooking Gas Delivery in <span className="text-[#1FA1EC]">Owerri</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.15] font-heading tracking-tight drop-shadow-md">
+              Reliable <span className="text-[#22C55E] underline decoration-[#1FA1EC]/50 decoration-4">LPG Supply</span> &amp; Cooking Gas Delivery in <span className="text-[#38BDF8]">Owerri</span>
             </h1>
 
             {/* Paragraph */}
-            <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed font-normal">
               We provide safe, reliable, and affordable cooking gas, cylinders, burners, regulators, hoses, accessories, maintenance, and home delivery for homes and businesses.
             </p>
 
             {/* Quick Benefits Bullet Points */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 py-2">
-              <div className="flex items-center gap-2 text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#18A84E] flex-shrink-0" />
+              <div className="flex items-center gap-2 text-sm text-slate-200 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-[#22C55E] flex-shrink-0" />
                 <span>Same-day doorstep delivery in Owerri</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#18A84E] flex-shrink-0" />
+              <div className="flex items-center gap-2 text-sm text-slate-200 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-[#22C55E] flex-shrink-0" />
                 <span>100% Calibrated weight guarantee</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#18A84E] flex-shrink-0" />
+              <div className="flex items-center gap-2 text-sm text-slate-200 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-[#22C55E] flex-shrink-0" />
                 <span>SON-Certified cylinders &amp; valves</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#18A84E] flex-shrink-0" />
+              <div className="flex items-center gap-2 text-sm text-slate-200 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-[#22C55E] flex-shrink-0" />
                 <span>Petrol-to-Gas conversion experts</span>
               </div>
             </div>
@@ -108,7 +120,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal }) => {
               {/* Primary Button */}
               <button
                 onClick={() => onOpenOrderModal()}
-                className="px-8 py-4 rounded-xl bg-gradient-to-r from-[#18A84E] via-[#16A34A] to-[#15803D] hover:from-[#15803D] hover:to-[#166534] text-white text-base font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 group"
+                className="px-8 py-4 rounded-xl bg-gradient-to-r from-[#18A84E] via-[#16A34A] to-[#15803D] hover:from-[#15803D] hover:to-[#166534] text-white text-base font-bold shadow-lg shadow-[#18A84E]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 group"
               >
                 <Flame className="w-5 h-5 text-amber-300 group-hover:scale-110 transition-transform" />
                 <span>Get Gas Delivered</span>
@@ -126,17 +138,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal }) => {
             </div>
 
             {/* Trust Badges Bar */}
-            <div className="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4 text-slate-600 text-xs font-semibold">
+            <div className="pt-6 border-t border-slate-700/80 grid grid-cols-3 gap-4 text-slate-300 text-xs font-semibold">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-[#18A84E] flex-shrink-0" />
+                <ShieldCheck className="w-5 h-5 text-[#22C55E] flex-shrink-0" />
                 <span>Safety Inspected</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-[#1FA1EC] flex-shrink-0" />
+                <Clock className="w-5 h-5 text-[#38BDF8] flex-shrink-0" />
                 <span>30-Min Owerri Dispatch</span>
               </div>
               <div className="flex items-center gap-2">
-                <Flame className="w-5 h-5 text-[#DD3F39] flex-shrink-0" />
+                <Flame className="w-5 h-5 text-[#EF4444] flex-shrink-0" />
                 <span>Pure Blue Flame</span>
               </div>
             </div>
