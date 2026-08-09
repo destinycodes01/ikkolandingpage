@@ -64,7 +64,7 @@ export const Services: React.FC<ServicesProps> = ({ onOpenOrderModal }) => {
   };
 
   return (
-    <section id="services" className="py-20 bg-[#F8FAFC] relative overflow-hidden scroll-mt-20">
+    <section id="services" className="py-20 bg-[#CADABF] relative overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
