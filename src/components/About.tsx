@@ -42,7 +42,7 @@ export const About: React.FC<AboutProps> = ({ onOpenOrderModal }) => {
               Who We Are
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-heading tracking-tight">
-              ABOUT
+              ABOUT US
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-[#18A84E] to-[#1FA1EC] mx-auto mt-4 rounded-full" />
           </motion.div>
