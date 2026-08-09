@@ -25,7 +25,7 @@ export const GasCalculator: React.FC<GasCalculatorProps> = ({ onOpenOrderModal }
   const currentInfo = sizeDetails[size];
 
   return (
-    <section className="py-16 bg-white border-y border-slate-200/80 relative">
+    <section className="py-16 bg-[#E8F5E9] border-y border-slate-200/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-[#18689B] rounded-3xl p-8 sm:p-10 text-white shadow-2xl relative overflow-hidden">

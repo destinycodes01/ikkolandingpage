@@ -16,7 +16,7 @@ export const Products: React.FC<ProductsProps> = ({ onOpenOrderModal }) => {
   });
 
   return (
-    <section id="products" className="py-20 bg-white relative overflow-hidden scroll-mt-20">
+    <section id="products" className="py-20 bg-[#E8F5E9] relative overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
