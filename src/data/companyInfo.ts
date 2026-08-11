@@ -30,7 +30,7 @@ export const COMPANY_INFO = {
   images: {
     heroStation: 'https://i.ibb.co/ch378Hnk/IKKOHEROIMG.jpg',
     heroBg: 'https://i.ibb.co/ch378Hnk/IKKOHEROIMG.jpg',
-    deliveryTruck: lpgDeliveryTruckImg,
+    deliveryTruck: 'https://i.ibb.co/GQz0bMfH/aboutikko.jpg',
     cylindersSet: lpgCylindersSetImg,
     accessories: gasAccessoriesImg,
     kitchenFamily: kitchenFamilyImg,

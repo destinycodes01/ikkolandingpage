@@ -68,11 +68,6 @@ export const About: React.FC<AboutProps> = ({ onOpenOrderModal }) => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
               
-              {/* Floating Official Brand Badge */}
-              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-lg border border-white/60 flex items-center z-10">
-                <BrandLogo size="sm" showText={true} />
-              </div>
-              
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white shadow-xl">
                 <p className="text-xs font-bold uppercase text-[#1FA1EC]">Local Energy Leader</p>
                 <p className="text-sm font-extrabold text-slate-900 font-heading">
