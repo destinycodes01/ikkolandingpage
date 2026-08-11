@@ -28,8 +28,8 @@ export const COMPANY_INFO = {
   email: 'ik.koenergyltd@gmail.com',
   businessHours: '7:00 AM - 8:00 PM (Monday - Sunday)',
   images: {
-    heroStation: heroLpgStationImg,
-    heroBg: heroBgEnergyImg,
+    heroStation: 'https://i.ibb.co/ch378Hnk/IKKOHEROIMG.jpg',
+    heroBg: 'https://i.ibb.co/ch378Hnk/IKKOHEROIMG.jpg',
     deliveryTruck: lpgDeliveryTruckImg,
     cylindersSet: lpgCylindersSetImg,
     accessories: gasAccessoriesImg,
