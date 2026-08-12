@@ -68,7 +68,7 @@ export const About: React.FC<AboutProps> = ({ onOpenOrderModal }) => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
               
-              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white shadow-xl">
+              <div className="absolute top-6 left-6 right-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white shadow-xl">
                 <p className="text-xs font-bold uppercase text-[#1FA1EC]">Local Energy Leader</p>
                 <p className="text-sm font-extrabold text-slate-900 font-heading">
                   Serving Owerri Homes, Businesses &amp; Industries
