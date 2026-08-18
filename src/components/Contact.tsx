@@ -161,14 +161,26 @@ export const Contact: React.FC = () => {
                     <div className="p-3 rounded-2xl bg-[#18A84E]/10 text-[#18A84E] flex-shrink-0 mt-1">
                       <Mail className="w-6 h-6" />
                     </div>
-                    <div>
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Email Address</h4>
-                      <a
-                        href={`mailto:${COMPANY_INFO.email}`}
-                        className="text-sm font-bold text-slate-900 hover:text-[#1FA1EC] mt-1 block"
-                      >
-                        {COMPANY_INFO.email}
-                      </a>
+                    <div className="space-y-1.5">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500">Official Email Addresses</h4>
+                      <div>
+                        <span className="text-[11px] font-semibold text-slate-400 block">General &amp; Main Inquiries:</span>
+                        <a
+                          href={`mailto:${COMPANY_INFO.mainEmail}`}
+                          className="text-sm font-bold text-slate-900 hover:text-[#1FA1EC] block"
+                        >
+                          {COMPANY_INFO.mainEmail}
+                        </a>
+                      </div>
+                      <div className="pt-1">
+                        <span className="text-[11px] font-semibold text-slate-400 block">Customer &amp; Order Support:</span>
+                        <a
+                          href={`mailto:${COMPANY_INFO.supportEmail}`}
+                          className="text-sm font-bold text-slate-900 hover:text-[#1FA1EC] block"
+                        >
+                          {COMPANY_INFO.supportEmail}
+                        </a>
+                      </div>
                     </div>
                   </div>
 

@@ -25,7 +25,13 @@ export const COMPANY_INFO = {
   },
   phone: '07073333969',
   phoneFormatted: '+234 707 333 3969',
-  email: 'ik.koenergyltd@gmail.com',
+  email: 'contact@ikkoenergyltd.com',
+  mainEmail: 'contact@ikkoenergyltd.com',
+  supportEmail: 'support@ikkoenergyltd.com',
+  emails: {
+    main: 'contact@ikkoenergyltd.com',
+    support: 'support@ikkoenergyltd.com',
+  },
   businessHours: '7:00 AM - 8:00 PM (Monday - Sunday)',
   images: {
     heroStation: 'https://i.ibb.co/ch378Hnk/IKKOHEROIMG.jpg',

@@ -131,11 +131,22 @@ export const Footer: React.FC<FooterProps> = ({ onOpenOrderModal }) => {
                   {COMPANY_INFO.phoneFormatted}
                 </a>
               </div>
-              <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#18A84E] flex-shrink-0" />
-                <a href={`mailto:${COMPANY_INFO.email}`} className="hover:underline">
-                  {COMPANY_INFO.email}
-                </a>
+              <div className="flex items-start gap-2.5">
+                <Mail className="w-4 h-4 text-[#18A84E] flex-shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <div>
+                    <span className="text-[10px] text-slate-400 block uppercase tracking-wider">Main:</span>
+                    <a href={`mailto:${COMPANY_INFO.mainEmail}`} className="hover:underline hover:text-[#1FA1EC] text-white">
+                      {COMPANY_INFO.mainEmail}
+                    </a>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-slate-400 block uppercase tracking-wider">Support:</span>
+                    <a href={`mailto:${COMPANY_INFO.supportEmail}`} className="hover:underline hover:text-[#1FA1EC] text-white">
+                      {COMPANY_INFO.supportEmail}
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 

@@ -83,10 +83,10 @@ export const OrderModal: React.FC<OrderModalProps> = ({
           {
             from_name: customerName,
             from_phone: customerPhone,
-            from_email: 'delivery-request@ik.koenergy.com',
+            from_email: COMPANY_INFO.supportEmail,
             service_needed: `Gas Order: ${gasSize} (${orderType})`,
             message: orderDetails,
-            to_email: COMPANY_INFO.email,
+            to_email: COMPANY_INFO.supportEmail,
           },
           publicKey
         );
