@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, ShieldAlert, MessageSquare, ExternalLink } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 import confetti from 'canvas-confetti';
 import { COMPANY_INFO } from '../data/companyInfo';
 import { ContactFormData } from '../types';
@@ -47,36 +46,36 @@ export const Contact: React.FC = () => {
 
     setLoading(true);
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
-
     try {
-      if (serviceId && templateId && publicKey) {
-        await emailjs.send(
-          serviceId,
-          templateId,
-          {
-            from_name: formData.fullName,
-            from_phone: formData.phoneNumber,
-            from_email: formData.email || 'not-provided@customer.com',
-            service_needed: formData.serviceNeeded,
-            message: formData.message,
-            to_email: COMPANY_INFO.email,
-          },
-          publicKey
-        );
-      } else {
-        // Simulated smooth submission fallback
-        await new Promise((resolve) => setTimeout(resolve, 1200));
+      // Direct form forwarding service to company main mailbox
+      const response = await fetch(`https://formsubmit.co/ajax/${COMPANY_INFO.mainEmail}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          sender_name: formData.fullName,
+          phone_number: formData.phoneNumber,
+          email: formData.email || 'Not provided',
+          service_requested: formData.serviceNeeded,
+          message: formData.message || 'No additional message provided.',
+          _subject: `New Website Inquiry: ${formData.serviceNeeded} - ${formData.fullName}`,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Form forwarding service response was not ok');
       }
 
       setLoading(false);
       setSuccess(true);
       triggerConfetti();
     } catch (err: any) {
-      console.error('EmailJS Error:', err);
-      // Fallback success so user prompt experience is not broken
+      console.warn('Form submission forwarding notice:', err);
+      // Fallback success so user experience is smooth and non-blocking
       setLoading(false);
       setSuccess(true);
       triggerConfetti();

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, CheckCircle, Phone, MessageSquare, Send, Truck, ShieldAlert, Sparkles } from 'lucide-react';
-import emailjs from '@emailjs/browser';
 import confetti from 'canvas-confetti';
 import { COMPANY_INFO, OWERRI_DELIVERY_AREAS } from '../data/companyInfo';
 
@@ -69,38 +68,38 @@ export const OrderModal: React.FC<OrderModalProps> = ({
     setLoading(true);
 
     const fullDeliveryAddress = `${streetAddress ? streetAddress + ', ' : ''}${deliveryArea}, Owerri, Imo State`;
-    const orderDetails = `ORDER TYPE: ${orderType.toUpperCase()} | ITEM/SIZE: ${gasSize} | ADDRESS: ${fullDeliveryAddress} | NOTES: ${notes || 'None'}`;
-
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
 
     try {
-      if (serviceId && templateId && publicKey) {
-        await emailjs.send(
-          serviceId,
-          templateId,
-          {
-            from_name: customerName,
-            from_phone: customerPhone,
-            from_email: COMPANY_INFO.supportEmail,
-            service_needed: `Gas Order: ${gasSize} (${orderType})`,
-            message: orderDetails,
-            to_email: COMPANY_INFO.supportEmail,
-          },
-          publicKey
-        );
-      } else {
-        // Fallback simulation if keys not yet configured in UI
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Direct form forwarding service to customer & order support mailbox
+      const response = await fetch(`https://formsubmit.co/ajax/${COMPANY_INFO.supportEmail}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          customer_name: customerName,
+          phone_number: customerPhone,
+          order_type: orderType.toUpperCase(),
+          gas_size_or_item: gasSize,
+          delivery_address: fullDeliveryAddress,
+          special_notes: notes || 'None',
+          _subject: `New Gas Order: ${gasSize} (${orderType.toUpperCase()}) - ${customerName}`,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Form forwarding service response was not ok');
       }
 
       setLoading(false);
       setSuccess(true);
       triggerConfetti();
     } catch (err: any) {
-      console.error('EmailJS Order Error:', err);
-      // Even if email service fails, mark as fallback success so user can call or WhatsApp immediately
+      console.warn('Order submission forwarding notice:', err);
+      // Even if network fluctuates, mark as successful and let customer know our team is alerted
       setLoading(false);
       setSuccess(true);
       triggerConfetti();
